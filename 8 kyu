@@ -1,7 +1,24 @@
-#Solution to problem: Can we divide it?
+//Solution to problem: Can we divide it?
 public static bool is_divide_by(int number, int a, int b)
 {
     if (number % a == 0 && number % b == 0) {
          return true; }
     return false;
+}
+
+//Solution to problem: Two Oldest Ages
+public class LargestTwo
+{
+  public static int[] TwoOldestAges(int[] ages)
+  {
+        List<int> CopyOfages = new List<int>();
+
+        for (int i = 0; i < ages.Length; i++)
+        {
+            CopyOfages.Add(ages[i]);
+        }
+
+        CopyOfages.Sort();
+        return new int[] { CopyOfages[CopyOfages.Count - 2], CopyOfages[CopyOfages.Count - 1] };
+  }
 }
