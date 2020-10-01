@@ -1,5 +1,5 @@
 #Solution to problem: Can we divide it?
-bool isDivideBy(int number, int a, int b)
+public static bool is_divide_by(int number, int a, int b)
 {
     if (number % a == 0 && number % b == 0) {
          return true; }
