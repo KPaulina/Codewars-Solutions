@@ -18,3 +18,30 @@ public static class Kata
       return unique;
   }
 }
+//Form The Largest 
+using System;
+using System.Collections.Generic;
+
+class Kata
+{
+        public static int MaxNumber(int n)
+        {
+            List<int> numbers = new List<int>();
+            while (n > 0)
+            {
+                int digit = n % 10;
+                n /= 10;
+                numbers.Add(digit);
+            }
+            numbers.Sort();
+            numbers.Reverse();
+
+            int total = 0;
+            foreach (int entry in numbers)
+            {
+                total = 10 * total + entry;
+            }
+            return total;
+
+        }
+}
