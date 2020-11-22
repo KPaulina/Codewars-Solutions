@@ -1,0 +1,22 @@
+7 kyu problems
+#Square Every Digit
+def square_digits(num):
+    suma = ''.join(str(int(i)**2) for i in str(num))
+    return int(suma)
+    
+Sum of odd numbers    
+#def row_sum_odd_numbers(n):
+    return n**3
+
+8kyu
+#Opposite number
+def opposite(number):
+      return -1 * number
+      
+
+#Is the string uppercase?
+def is_uppercase(inp):
+    if any(x.islower() for x in inp):
+        return False
+    else: 
+        return True
