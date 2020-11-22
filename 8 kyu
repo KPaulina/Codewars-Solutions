@@ -73,3 +73,32 @@ public static class Kata
       return sum;
   }
 }
+
+//Reversed Words
+using System;
+using System.Collections.Generic;
+
+public class Kata
+{
+       public static string ReverseWords(string str)
+        {
+            List<string> reversString = new List<string>();
+            string s = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == ' ')
+                {
+                    reversString.Add(s);
+                    s = "";
+                } 
+                else
+                {
+                    s += str[i];
+                }
+            }
+            reversString.Add(s);
+            reversString.Reverse();
+            string result = string.Join(" ", reversString);
+            return result;
+        }
+}
