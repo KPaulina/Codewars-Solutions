@@ -1,4 +1,9 @@
 7 kyu problems
+#Form The Minimum
+def min_value(digits):
+    uniqueDigits = sorted(list(set(digits)))  
+    return int(''.join(list(map(str,uniqueDigits))))
+
 #Square Every Digit
 def square_digits(num):
     suma = ''.join(str(int(i)**2) for i in str(num))
@@ -7,7 +12,7 @@ def square_digits(num):
 Sum of odd numbers    
 #def row_sum_odd_numbers(n):
     return n**3
-
+    
 8kyu
 #Opposite number
 def opposite(number):
