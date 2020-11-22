@@ -22,3 +22,54 @@ public class LargestTwo
         return new int[] { CopyOfages[CopyOfages.Count - 2], CopyOfages[CopyOfages.Count - 1] };
   }
 }
+
+//Get the mean of an array
+public class Kata
+{
+  public static int GetAverage(int[] marks)
+  {
+      int sum = 0;
+      int total = marks.Length;
+      for(int i = 0; i < marks.Length; i++)
+      {
+          sum = sum + marks[i];
+      }
+
+      return sum / total;
+  }
+}
+
+//Generate range of integers
+using System; 
+using System.Collections; 
+using System.Collections.Generic; 
+
+public class Kata
+{
+  public static int[] GenerateRange(int min, int max, int step)
+  {
+     List<int> addValues = new List<int>();
+     for (int i = min; min <= max; i++)
+     {
+        addValues.Add(min);
+        min += step;
+     }
+     return addValues.ToArray();
+       
+  }
+}
+
+//Square(n) Sum
+public static class Kata
+{
+  public static int SquareSum(int[] n)
+  { 
+      int sum = 0;
+      int  i = 0;
+      while (i < n.Length) {
+        sum = n[i] * n[i] + sum;
+        i++;
+      }
+      return sum;
+  }
+}
