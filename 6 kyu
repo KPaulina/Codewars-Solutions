@@ -26,3 +26,26 @@ public static class Kata
       return sum;
   }
 }
+
+//Sums of Parts
+using System;
+
+class SumParts
+{
+
+        public static int[] PartsSums(int[] ls)
+        {
+
+            var results = new int[ls.Length + 1];
+            int i = ls.Length - 1;
+            //counting from the end of the array, for example in array {0, 1, 3, 6, 10} (first 10, then 10 + 6, then 10 + 6 + 3)
+            while (i >= 0) 
+            {
+                results[i] = ls[i] + results[i + 1];
+                i--;
+            }
+
+            return results;
+
+        }
+}
