@@ -45,3 +45,23 @@ class Kata
 
         }
 }
+
+//Largest Elements 
+using System.Collections.Generic;
+
+public class Kata
+{
+  public static List<int> Largest(int n, List<int> xs)
+  {
+        List<int> copy = new List<int>();
+        xs.Sort();
+        xs.Reverse();
+
+        for(int i = 0; i <= n-1; i++)
+        {
+            copy.Add(xs[i]);
+        }
+        copy.Reverse();
+        return copy;
+  }
+}
