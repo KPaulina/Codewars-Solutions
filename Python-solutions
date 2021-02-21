@@ -1,4 +1,16 @@
 7 kyu problems
+#Rearrange Number to Get its Maximum
+def max_redigit(num): 
+    if num <= 0 or num <= 99 or num >= 1000:
+        return None
+    else:
+        tmp = [int(x) for x in str (num)]
+        tmp.sort()
+        tmp.reverse()
+        strings = [str(intager) for intager in tmp]
+        a_string = "".join(strings)
+        return int(a_string)
+        
 #Form The Minimum
 def min_value(digits):
     uniqueDigits = sorted(list(set(digits)))  
@@ -25,3 +37,10 @@ def is_uppercase(inp):
         return False
     else: 
         return True
+
+#Do I get a bonus?
+def bonus_time(salary, bonus):
+    if bonus:
+        return f'${salary * 10}'
+    else:
+        return f'${salary}'
