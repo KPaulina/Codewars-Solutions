@@ -1,4 +1,19 @@
 7 kyu problems
+
+#solution to problem Switcheroo
+def switcheroo(string):
+    tmp = []
+    for i in string:
+        if i == 'a':
+            tmp.append('b')
+        elif i == 'b':
+            tmp.append('a')
+        else:
+            tmp.append(i)
+
+    result = "".join(tmp)
+    return result
+
 #Rearrange Number to Get its Maximum
 def max_redigit(num): 
     if num <= 0 or num <= 99 or num >= 1000:
