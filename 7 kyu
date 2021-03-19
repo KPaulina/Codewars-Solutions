@@ -81,3 +81,41 @@ public class Kata
        return "odd";
   }
 }
+
+//Even or Odd - Which is Greater?
+using System.Collections.Generic;
+using System;
+using System.Linq;
+
+public class EvenOrOddKata
+{
+  public static string EvenOrOdd(string str)
+  {
+            int sumEven = 0;
+            int sumOdd = 0;
+            List<int> digits = str.Select(c => c - '0').ToList();
+            for (int i = 0; i < digits.Count; i++)
+            {
+                if (digits[i] % 2 == 0)
+                {
+                    sumEven += digits[i];
+                }
+                else
+                {
+                    sumOdd += digits[i];
+                }
+            }
+            if (sumEven > sumOdd)
+            {
+                return "Even is greater than Odd";
+            }
+            else if (sumEven == sumOdd)
+            {
+                return "Even and Odd are the same";
+            } 
+            return "Odd is greater than Even";
+    
+  }
+}
+
+2 minutes ago
