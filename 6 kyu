@@ -49,3 +49,25 @@ class SumParts
 
         }
 }
+
+//Multiplication table
+using System;
+
+namespace Solution
+{
+  class Solution
+  {
+    public static int[,] MultiplicationTable(int size)
+    {
+        int[,] multiplication = new int[size, size];
+        for(int i = 1; i <= size; i++)
+        {
+           for(int j = 1; j <= size; j++)
+           {
+              multiplication[i - 1, j - 1] = i * j;
+           }
+        }
+        return multiplication;
+    }
+  }
+}
